@@ -4,15 +4,59 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Photo Wall</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      background-color: #4caf50;
+      color: white;
+      margin: 0;
+      padding: 1rem;
+    }
+    #photoWall {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
+      padding: 1rem;
+    }
+    #photoWall img {
+      width: 100%;
+      border: 2px solid #ddd;
+      border-radius: 5px;
+    }
+    #openCamera {
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 10px auto;
+      border-radius: 5px;
+    }
+    #openCamera:hover {
+      background-color: #45a049;
+    }
+    #camera {
+      display: block;
+      margin: 1rem auto;
+      max-width: 100%;
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome to the Photo Wall!</h1>
+  <h1>Photo Wall</h1>
   <button id="openCamera">Open Camera</button>
   <video id="camera" autoplay playsinline></video>
-  <canvas id="canvas" style="display: none;"></canvas>
-  <button id="uploadPhoto" style="display: none;">Upload Photo</button>
   <div id="photoWall"></div>
-
   <script src="app.js"></script>
 </body>
 </html>
+
+
+
+
